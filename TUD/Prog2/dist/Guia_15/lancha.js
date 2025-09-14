@@ -1,15 +1,25 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-class Lancha extends Barco {
+const barco_1 = __importDefault(require("./barco"));
+class Lancha extends barco_1.default {
     _motorFueraDeBorda = false;
     get MotorFueraDeBorda() {
         return this._motorFueraDeBorda;
     }
-    set MotorFueraDeBorda(value): void {
+    set MotorFueraDeBorda(value) {
         this._motorFueraDeBorda = value;
     }
-    constructor(pNombre, pVelocidad, pFlotabilidad, pEstabilidad, pMotor) {
-        super(pNombre, pVelocidad, pFlotabilidad, pEstabilidad);
+    remolcar(objeto) {
+        if (objeto.peso() > 300)
+            console.log("¡Pesa más de 300 " + objeto.descripcion);
+        else
+            console.log("Estamos remolcando a " + objeto.descripcion);
+    }
+    constructor(pNombre, pVelocidad, pFlotabilidad, pEstabilidad, pMotor, pPeso) {
+        super(pNombre, pVelocidad, pFlotabilidad, pEstabilidad, pPeso);
         this.MotorFueraDeBorda = pMotor;
     }
     presentarse() {

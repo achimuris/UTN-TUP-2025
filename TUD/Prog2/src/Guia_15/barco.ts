@@ -1,8 +1,15 @@
 import IPesable from "./ipesable";
 export default abstract class  Barco implements IPesable
 {
+    private _nombre: string = "";
+        public get nombre(): string {
+        return this._nombre;
+    }
+    public set nombre(value: string) {
+        this._nombre = value;
+    }
     descripcion(): string {
-        return this.nombre;
+        return this._nombre;
     }
     private _peso : number;
     peso(): number {
@@ -18,28 +25,23 @@ export default abstract class  Barco implements IPesable
         this._peso = pPeso;
     }
 
-    private _nombre: string;
-    public get nombre(): string {
-        return this._nombre;
-    }
-    public set nombre(value: string) {
-        this._nombre = value;
-    }
-    private _velocidad: number;
+    
+
+    private _velocidad!: number;
     public get velocidad(): number {
         return this._velocidad;
     }
     public set velocidad(value: number) {
         this._velocidad = value;
     }
-    private _flotabilidad: number;
+    private _flotabilidad!: number;
     public get flotabilidad(): number {
         return this._flotabilidad;
     }
     public set flotabilidad(value: number) {
         this._flotabilidad = value;
     }
-    private _estabilidad: number;
+    private _estabilidad!: number;
     public get estabilidad(): number {
         return this._estabilidad;
     }

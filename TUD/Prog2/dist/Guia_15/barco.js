@@ -1,24 +1,26 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class Barco {
-    descripcion() {
-        return this.nombre;
-    }
-    peso() {
-        throw new Error("Method not implemented.");
-    }
-    constructor(pNombre, pVelocidad, pFlotabilidad, pEstabilidad) {
-        this.nombre = pNombre;
-        this.velocidad = pVelocidad;
-        this.estabilidad = pEstabilidad;
-        this.flotabilidad = pFlotabilidad;
-    }
-    _nombre;
+    _nombre = "";
     get nombre() {
         return this._nombre;
     }
     set nombre(value) {
         this._nombre = value;
+    }
+    descripcion() {
+        return this._nombre;
+    }
+    _peso;
+    peso() {
+        return this._peso;
+    }
+    constructor(pNombre, pVelocidad, pFlotabilidad, pEstabilidad, pPeso) {
+        this.nombre = pNombre;
+        this.velocidad = pVelocidad;
+        this.estabilidad = pEstabilidad;
+        this.flotabilidad = pFlotabilidad;
+        this._peso = pPeso;
     }
     _velocidad;
     get velocidad() {
