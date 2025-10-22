@@ -1,7 +1,8 @@
+import Claustrofobico from "./claustrofobico";
 import Micro from "./micro";
 import Persona from "./persona";
 
-export default  abstract class   Empleado extends Persona
+export default   class   Empleado extends Persona
 {
     private _legajo : string;
     
@@ -9,7 +10,13 @@ export default  abstract class   Empleado extends Persona
         return this._legajo;
     }
 
-    public abstract meSuboEnMicro(pMicro : Micro): boolean;
+    //public  meSuboEnMicro(pMicro : Micro): boolean;
+    public constructor(pNombre : string, pApellido : string, pLegajo : string, pJefe : string)
+    {
+        super(pNombre, pApellido);
+        this.legajo=pLegajo;
+        this.jefe = new Claustrofobico("", "", "", "" );
+    }
 
     public constructor ( pNombre : string, pApellido : string, pLegajo : string, pJefe : Empleado | undefined, pEmpleadosACargo : Set<Empleado> = new Set<Empleado>())
     {

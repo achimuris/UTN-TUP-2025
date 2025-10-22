@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+<question type="multichoice">
+  <name><text>SRP_UTN</text></name>
+  <questiontext format="html">
+    <text><![CDATA[
+<p>Según los apuntes de la unidad, ¿por qué viola SRP la siguiente clase?</p>
+<pre>
+class Book {
+  replaceWordInText(word: string): string { ... }
+  isWordInText(word: string): boolean { ... }
+  printTextToConsole(): void { ... }
+}
+</pre>
+]]></text>
+  </questiontext>
+  <answer fraction="100">
+    <text>Porque mezcla manipulación del texto con impresión</text>
+    <feedback>Correcto: dos responsabilidades en una clase.</feedback>
+  </answer>
+  <answer fraction="0">
+    <text>Porque no usa interfaces</text>
+  </answer>
+  <answer fraction="0">
+    <text>Porque tiene muchos atributos privados</text>
+  </answer>
+  <answer fraction="0">
+    <text>Porque no hereda de ninguna clase abstracta</text>
+  </answer>
+</question>
+
+<question type="multichoice">
+  <name><text>OCP_UTN</text></name>
+  <questiontext format="html">
+    <text><![CDATA[
+<p>¿Qué mecanismo proponen los apuntes para extender sin modificar la clase BookPersistence?</p>
+<pre>
+interface BookPersistence { save(book: Book): void; }
+class DbPersistence implements BookPersistence { ... }
+</pre>
+]]></text>
+  </questiontext>
+  <answer fraction="100">
+    <text>Interfaces y nuevas implementaciones</text>
+    <feedback>Correcto: código cerrado a modificación, abierto a extensión.</feedback>
+  </answer>
+  <answer fraction="0">
+    <text>Herencia múltiple</text>
+  </answer>
+  <answer fraction="0">
+    <text>Sobrecarga de operadores</text>
+  </answer>
+  <answer fraction="0">
+    <text>Namespaces</text>
+  </answer>
+</question>
+
+<question type="multichoice">
+  <name><text>LSP_UTN</text></name>
+  <questiontext format="html">
+    <text><![CDATA[
+<p>En el ejemplo de los apuntes, ¿por qué DumbDog viola LSP?</p>
+<pre>
+class Dog extends Animal { makeNoise(): void { console.log("bow wow"); } }
+class DumbDog extends Dog { makeNoise(): void { throw new Error("I can't make noise"); } }
+</pre>
+]]></text>
+  </questiontext>
+  <answer fraction="100">
+    <text>Lanza excepción en lugar de comportarse como su padre</text>
+    <feedback>Correcto: el cliente no puede sustituir Dog por DumbDog.</feedback>
+  </answer>
+  <answer fraction="0">
+    <text>No implementa Animal</text>
+  </answer>
+  <answer fraction="0">
+    <text>Sobrescribe un método privado</text>
+  </answer>
+  <answer fraction="0">
+    <text>No tiene constructor</text>
+  </answer>
+</question>
+
+<question type="multichoice">
+  <name><text>ISP_UTN</text></name>
+  <questiontext format="html">
+    <text><![CDATA[
+<p>Según los apuntes, ¿qué solución aplica ISP en el siguiente fragmento?</p>
+<pre>
+interface IBookPrinter { print(text: string): void; }
+interface IPaperBookPrinter { hasPaper(): boolean; }
+class PaperBookPrinter implements IBookPrinter, IPaperBookPrinter { ... }
+</pre>
+]]></text>
+  </questiontext>
+  <answer fraction="100">
+    <text>Dividir interfaces grandes en específicas</text>
+    <feedback>Correcto: la clase solo implementa lo que necesita.</feedback>
+  </answer>
+  <answer fraction="0">
+    <text>Una única interfaz con todos los métodos</text>
+  </answer>
+  <answer fraction="0">
+    <text>Eliminar interfaces</text>
+  </answer>
+  <answer fraction="0">
+    <text>Usar una clase abstracta grande</text>
+  </answer>
+</question>
+
+<question type="multichoice">
+  <name><text>DIP_UTN</text></name>
+  <questiontext format="html">
+    <text><![CDATA[
+<p>Observá el ejemplo de los apuntes. ¿Qué cambio aplica DIP?</p>
+<pre>
+// Antes: acoplado a concreciones
+class Computer {
+  private keyboard: StandardKeyboard;
+  private monitor: Monitor;
+}
+// Después: depende de abstracciones
+class Computer {
+  private keyboard: Keyboard;   // interfaz
+  private monitor: Monitor;     // interfaz
+  constructor(k: Keyboard, m: Monitor) { ... }
+}
+</pre>
+]]></text>
+  </questiontext>
+  <answer fraction="100">
+    <text>Inyectar abstracciones por constructor</text>
+    <feedback>Correcto: Computer ya no conoce implementaciones concretas.</feedback>
+  </answer>
+  <answer fraction="0">
+    <text>Usar herencia múltiple</text>
+  </answer>
+  <answer fraction="0">
+    <text>Hacer todas las clases finales</text>
+  </answer>
+  <answer fraction="0">
+    <text>Eliminar Keyboard y Monitor</text>
+  </answer>
+</question>
+
+</quiz>

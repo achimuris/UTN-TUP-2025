@@ -1,7 +1,7 @@
 import Empleado from "./empleado";
 import Micro from "./micro";
 
-export default class Claustrofobico extends Empleado
+class Claustrofobico extends Empleado
 {
     readonly toleranciaVolumen : number = 120;
 

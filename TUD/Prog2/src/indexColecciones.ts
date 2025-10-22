@@ -47,6 +47,7 @@ vectorDeNumeros.pop();
 vectorDeNumeros.push(6);
 vectorDeNumeros.push(5);
 
+
 vectorDeNumeros.forEach( elemento => {
     console.log(elemento);
 } )

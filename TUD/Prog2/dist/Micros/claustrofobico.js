@@ -13,5 +13,4 @@ class Claustrofobico extends empleado_1.default {
             return true;
     }
 }
-exports.default = Claustrofobico;
 //# sourceMappingURL=claustrofobico.js.map

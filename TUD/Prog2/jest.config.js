@@ -26,3 +26,10 @@ module.exports = {
     '^.+\\.(ts|tsx)$': ['ts-jest', { tsconfig: './tsconfig.json' }],
   },
 };
+
+ 
+module.exports = {
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+  testMatch: ['**/tests/**/*.spec.ts'],
+};

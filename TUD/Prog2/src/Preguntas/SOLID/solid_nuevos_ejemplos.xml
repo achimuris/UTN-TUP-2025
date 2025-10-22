@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+<!-- ======================= SRP ======================= -->
+
+<question type="multichoice">
+  <name><text>SRP_N01</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Se viola SRP en esta clase?</p>
+<pre>
+class Invoice {
+  calculateTotal(): number { ... }
+  generatePDF(): Buffer { ... }
+  sendEmail(to: string): void { ... }
+}
+</pre>
+]]></text></questiontext>
+  <answer fraction="100"><text>Sí, porque mezcla cálculo, formato y envío</text></answer>
+  <answer fraction="0"><text>No, porque todos los métodos usan datos de la factura</text></answer>
+  <answer fraction="0"><text>Solo si generatePDF usa una librería externa</text></answer>
+  <answer fraction="0"><text>Sí, pero solo por el nombre de la clase</text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text>SRP_N02</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Cuál sería la responsabilidad única de "InvoiceTaxCalculator"?</p>
+<pre>
+class InvoiceTaxCalculator {
+  addIVA(base: number): number { ... }
+  addIIBB(base: number): number { ... }
+}
+</pre>
+]]></text></questiontext>
+  <answer fraction="100"><text>Calcular impuestos sobre la base imponible</text></answer>
+  <answer fraction="0"><text>Guardar impuestos en base de datos</text></answer>
+  <answer fraction="0"><text>Mostrar impuestos en pantalla</text></answer>
+  <answer fraction="0"><text>Generar reportes de impuestos</text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text>SRP_N03</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Se cumple SRP en "UserAuthenticator"?</p>
+<pre>
+class UserAuthenticator {
+  login(email: string, pwd: string): boolean { ... }
+  hashPassword(pwd: string): string { ... }
+}
+</pre>
+]]></text></questiontext>
+  <answer fraction="100"><text>Sí, ambos métodos están relacionados con autenticación</text></answer>
+  <answer fraction="0"><text>No, hashPassword debería estar en otra clase</text></answer>
+  <answer fraction="0"><text>Sí, porque usan el mismo algoritmo</text></answer>
+  <answer fraction="0"><text>No, porque reciben strings</text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text>SRP_N04</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Qué responsabilidad extra viola SRP en "Product"?</p>
+<pre>
+class Product {
+  getPrice(): number { ... }
+  updateStock(qty: number): void { ... }
+  printLabel(): string { ... }
+}
+</pre>
+]]></text></questiontext>
+  <answer fraction="0"><text>Ninguna, todas son de producto</text></answer>
+  <answer fraction="100"><text>printLabel (debería estar en una clase de formato)</text></answer>
+  <answer fraction="0"><text>updateStock (es parte del dominio)</text></answer>
+  <answer fraction="0"><text>getPrice (es esencial)</text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text>SRP_N05</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Se justifica dividir "PaymentProcessor" por método de pago?</p>
+<pre>
+class PaymentProcessor {
+  payWithCard(data: CardData): void { ... }
+  payWithCrypto(wallet: Wallet): void { ... }
+  payWithCash(amount: number): void { ... }
+}
+</pre>
+]]></text></questiontext>
+  <answer fraction="100"><text>Sí, cada método es un algoritmo distinto y puede cambiar por separado</text></answer>
+  <answer fraction="0"><text>No, porque todos procesan un pago</text></answer>
+  <answer fraction="0"><text>Solo si usan APIs externas</text></answer>
+  <answer fraction="0"><text>No, porque reciben tipos distintos</text></answer>
+</question>
+
+<!-- ======================= OCP ======================= -->
+
+<question type="multichoice">
+  <name><text>OCP_N01</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Cumple OCP este código?</p>
+<pre>
+function area(figura: any): number {
+  if (figura.kind === "circle") return Math.PI * figura.r ** 2;
+  if (figura.kind === "square") return figura.l ** 2;
+  return 0;
+}
+</pre>
+]]></text></questiontext>
+  <answer fraction="0"><text>Sí, porque usa un objeto genérico</text></answer>
+  <answer fraction="100"><text>No, agregar "triangle" requiere modificar la función</text></answer>
+  <answer fraction="0"><text>Sí, porque ya maneja dos tipos</text></answer>
+  <answer fraction="0"><text>No, porque usa any</text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text>OCP_N02</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Qué mecanismo permite extender sin modificar?</p>
+<pre>
+interface Formatter { format(data: string): string; }
+class JsonFormatter implements Formatter { ... }
+class XmlFormatter implements Formatter { ... }
+</pre>
+]]></text></questiontext>
+  <answer fraction="100"><text>Interfaces y nuevas implementaciones</text></answer>
+  <answer fraction="0"><text>Switch exhaustivo</text></answer>
+  <answer fraction="0"><text>Namespaces</text></answer>
+  <answer fraction="0"><text>Decoradores</text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text>OCP_N03</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Se puede agregar "PayPal" sin tocar el código existente?</p>
+<pre>
+interface PaymentGateway { pay(amount: number): void; }
+class StripeGateway implements PaymentGateway { ... }
+class MercadoPagoGateway implements PaymentGateway { ... }
+</pre>
+]]></text></questiontext>
+  <answer fraction="100"><text>Sí, creando class PayPalGateway implements PaymentGateway</text></answer>
+  <answer fraction="0"><text>No, hay que modificar la interfaz</text></answer>
+  <answer fraction="0"><text>Solo si PayPal usa la misma API</text></answer>
+  <answer fraction="0"><text>No, porque faltan métodos</text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text>OCP_N04</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Qué olor indica violación de OCP?</p>
+<pre>
+class Discount {
+  calculate(type: "STUDENT" | "SENIOR" | "VIP", price: number): number {
+    switch (type) { ... }
+  }
+}
+</pre>
+]]></text></questiontext>
+  <answer fraction="100"><text>Switch que crece con cada nuevo tipo</text></answer>
+  <answer fraction="0"><text>Uso de literales string</text></answer>
+  <answer fraction="0"><text>Falta de default</text></answer>
+  <answer fraction="0"><text>Uso de number</text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text>OCP_N05</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Cumple OCP este diseño de notificaciones?</p>
+<pre>
+interface Notifier { send(msg: string): void; }
+class EmailNotifier implements Notifier { ... }
+class SmsNotifier implements Notifier { ... }
+</pre>
+]]></text></questiontext>
+  <answer fraction="100"><text>Sí, puedo agregar TelegramNotifier sin tocar código existente</text></answer>
+  <answer fraction="0"><text>No, porque Notifier podría cambiar</text></answer>
+  <answer fraction="0"><text>Solo si uso herencia</text></answer>
+  <answer fraction="0"><text>No, porque send recibe string</text></answer>
+</question>
+
+<!-- ======================= LSP ======================= -->
+
+<question type="multichoice">
+  <name><text>LSP_N01</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Se puede sustituir SecuredCreditCard por CreditCard?</p>
+<pre>
+class CreditCard { pay(amount: number): void { ... } }
+class SecuredCreditCard extends CreditCard {
+  pay(amount: number): void {
+    if (amount > this.balance) throw new Error("Fondos insuficientes");
+  }
+}
+</pre>
+]]></text></questiontext>
+  <answer fraction="0"><text>Sí, siempre</text></answer>
+  <answer fraction="100"><text>No, porque agrega precondición más fuerte</text></answer>
+  <answer fraction="0"><text>Sí, porque es una subclase</text></answer>
+  <answer fraction="0"><text>No, porque cambia el tipo de retorno</text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text>LSP_N02</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Cumple LSP la siguiente jerarquía?</p>
+<pre>
+class Bird { fly(): void { console.log("flying"); } }
+class Ostrich extends Bird { fly(): void { /* no vuela */ } }
+</pre>
+]]></text></questiontext>
+  <answer fraction="0"><text>Sí, porque Ostrich implementa fly</text></answer>
+  <answer fraction="100"><text>No, porque el comportamiento difiere del esperado</text></answer>
+  <answer fraction="0"><text>Sí, porque fly puede estar vacío</text></answer>
+  <answer fraction="0"><text>No, porque no usa interfaces</text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text>LSP_N03</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Se mantiene LCP con esta implementación?</p>
+<pre>
+class Rectangle { setWidth(w: number): void { this.w = w; } setHeight(h: number): void { this.h = h; } area(): number { return this.w * this.h; } }
+class Square extends Rectangle { setWidth(w: number): void { this.w = this.h = w; } setHeight(h: number): void { this.w = this.h = h; } }
+</pre>
+]]></text></questiontext>
+  <answer fraction="0"><text>Sí, porque Square es un Rectangle</text></answer>
+  <answer fraction="100"><text>No, porque rompe la invariante “w puede cambiar sin h”</text></answer>
+  <answer fraction="0"><text>Sí, si usamos getters</text></answer>
+  <answer fraction="0"><text>No, porque cambia el tipo</text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text>LSP_N04</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Qué contrato se rompe aquí?</p>
+<pre>
+class FileReader { read(path: string): string { return fs.readFileSync(path, 'utf8'); } }
+class SafeFileReader extends FileReader { read(path: string): string { if (!fs.existsSync(path)) return ''; return super.read(path); } }
+</pre>
+]]></text></questiontext>
+  <answer fraction="0"><text>Ninguno, mejora la robustez</text></answer>
+  <answer fraction="100"><text>Postcondición: el valor de retorno ya no garantiza que el archivo existía</text></answer>
+  <answer fraction="0"><text>Precondición: path debe ser absoluto</text></answer>
+  <answer fraction="0"><text>Tipo de retorno</text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text>LSP_N05</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Se puede reemplazar CacheLogger por Logger?</p>
+<pre>
+class Logger { log(msg: string): void { console.log(msg); } }
+class CacheLogger extends Logger { private cache: string[] = []; log(msg: string): void { this.cache.push(msg); } flush(): void { this.cache.forEach(m => console.log(m)); } }
+</pre>
+]]></text></questiontext>
+  <answer fraction="0"><text>Sí, siempre</text></answer>
+  <answer fraction="100"><text>No, porque el cliente que espera ver logs inmediatos no los verá</text></answer>
+  <answer fraction="0"><text>Sí, porque cache es privado</text></answer>
+  <answer fraction="0"><text>No, porque cambia la signatura</text></answer>
+</question>
+
+<!-- ======================= ISP ======================= -->
+
+<question type="multichoice">
+  <name><text>ISP_N01</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Se fuerza a implementar métodos innecesarios?</p>
+<pre>
+interface Printer { print(): void; scan(): void; fax(): void; }
+class SimplePrinter implements Printer { print(): void { ... } scan(): void { throw new Error("No scan"); } fax(): void { throw new Error("No fax"); } }
+</pre>
+]]></text></questiontext>
+  <answer fraction="100"><text>Sí, viola ISP</text></answer>
+  <answer fraction="0"><text>No, porque los métodos están definidos</text></answer>
+  <answer fraction="0"><text>No, si usamos métodos vacíos</text></answer>
+  <answer fraction="0"><text>Sí, pero solo si lanza excepción</text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text>ISP_N02</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Cumple ISP este diseño?</p>
+<pre>
+interface IPrinter { print(): void; }
+interface IScanner { scan(): void; }
+class MultiFunctionMachine implements IPrinter, IScanner { ... }
+</pre>
+]]></text></questiontext>
+  <answer fraction="100"><text>Sí, cada clase implementa solo lo que usa</text></answer>
+  <answer fraction="0"><text>No, porque hay que implementar dos interfaces</text></answer>
+  <answer fraction="0"><text>No, porque MultiFunctionMachine implementa ambas</text></answer>
+  <answer fraction="0"><text>Sí, pero solo si hay una sola interfaz</text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text>ISP_N03</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Qué fragmento obliga a implementar métodos que no usa?</p>
+<pre>
+interface Worker { work(): void; eat(): void; sleep(): void; }
+class Robot implements Worker { work(): void { ... } eat(): void { throw new Error("No eat"); } sleep(): void { throw new Error("No sleep"); } }
+</pre>
+]]></text></questiontext>
+  <answer fraction="100"><text>Worker obliga a Robot a implementar eat y sleep</text></answer>
+  <answer fraction="0"><text>Ninguno, Robot puede dejarlos vacíos</text></answer>
+  <answer fraction="0"><text>Solo si los métodos son abstractos</text></answer>
+  <answer fraction="0"><text>No, porque Robot es una subclase</text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text>ISP_N04</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Cómo se segrega mejor la interfaz "MediaPlayer"?</p>
+<pre>
+interface MediaPlayer { playAudio(): void; playVideo(): void; displaySubtitle(): void; }
+</pre>
+]]></text></questiontext>
+  <answer fraction="100"><text>IAudioPlayer, IVideoPlayer, ISubtitlePlayer</text></answer>
+  <answer fraction="0"><text>IMediaPlayer con métodos opcionales</text></answer>
+  <answer fraction="0"><text>Una única interfaz más grande</text></answer>
+  <answer fraction="0"><text>Eliminar interfaces y usar clases abstractas</text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text>ISP_N05</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Se obliga a implementar métodos innecesarios en "CloudStorage"?</p>
+<pre>
+interface Storage { save(path: string): void; read(path: string): string; createFolder(name: string): void; }
+class S3Storage implements Storage { ... } // S3 no tiene carpetas
+</pre>
+]]></text></questiontext>
+  <answer fraction="100"><text>Sí, createFolder no aplica a S3</text></answer>
+  <answer fraction="0"><text>No, porque puede estar vacío</text></answer>
+  <answer fraction="0"><text>No, porque todas las implementaciones tienen carpetas</text></answer>
+  <answer fraction="0"><text>Sí, pero solo si lanza Error</text></answer>
+</question>
+
+<!-- ======================= DIP ======================= -->
+
+<question type="multichoice">
+  <name><text>DIP_N01</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Se viola DIP en esta clase?</p>
+<pre>
+class OrderService {
+  private db = new PostgreSQL();
+  save(order: Order): void { this.db.insert(order); }
+}
+</pre>
+]]></text></questiontext>
+  <answer fraction="100"><text>Sí, depende de una clase concreta</text></answer>
+  <answer fraction="0"><text>No, porque PostgreSQL es estable</text></answer>
+  <answer fraction="0"><text>Sí, pero solo si cambia de base</text></answer>
+  <answer fraction="0"><text>No, porque es privado</text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text>DIP_N02</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Cumple DIP este diseño?</p>
+<pre>
+interface Database { insert(obj: any): void; }
+class OrderService {
+  constructor(private db: Database) {}
+  save(order: Order): void { this.db.insert(order); }
+}
+</pre>
+]]></text></questiontext>
+  <answer fraction="100"><text>Sí, depende de una abstracción</text></answer>
+  <answer fraction="0"><text>No, porque insert usa any</text></answer>
+  <answer fraction="0"><text>Solo si Database es una clase abstracta</text></answer>
+  <answer fraction="0"><text>No, porque Order es concreto</text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text>DIP_N03</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Qué cambio aplica DIP en el siguiente fragmento?</p>
+<pre>
+// Antes
+class Logger { log(msg: string): void { console.log(msg); } }
+class Service { private logger = new Logger(); work(): void { this.logger.log("done"); } }
+// Después
+interface ILogger { log(msg: string): void; }
+class Service { constructor(private logger: ILogger) {} work(): void { this.logger.log("done"); } }
+</pre>
+]]></text></questiontext>
+  <answer fraction="100"><text>Inyectar ILogger en lugar de instanciar Logger</text></answer>
+  <answer fraction="0"><text>Cambiar console.log por winston</text></answer>
+  <answer fraction="0"><text>Hacer Logger estática</text></answer>
+  <answer fraction="0"><text>Eliminar la interfaz</text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text>DIP_N04</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Se puede cambiar de implementación sin tocar Service?</p>
+<pre>
+interface HttpClient { get(url: string): Promise&lt;any&gt;; }
+class FetchClient implements HttpClient { ... }
+class AxiosClient implements HttpClient { ... }
+class Service {
+  constructor(private client: HttpClient) {}
+  async fetchData(url: string) { return this.client.get(url); }
+}
+</pre>
+]]></text></questiontext>
+  <answer fraction="100"><text>Sí, inyectando FetchClient o AxiosClient</text></answer>
+  <answer fraction="0"><text>No, porque Service conoce la implementación</text></answer>
+  <answer fraction="0"><text>Solo si uso singleton</text></answer>
+  <answer fraction="0"><text>No, porque HttpClient es una interfaz</text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text>DIP_N05</text></name>
+  <questiontext format="html"><text><![CDATA[
+<p>¿Qué afirmación respeta DIP?</p>
+<pre>
+A) class A { private b = new B(); }
+B) class A { constructor(private b: IB) {} }
+C) class A { static create() { return new A(new B()); } }
+D) class A { private b: IB = Container.get&lt;IB&gt;(); }
+</pre>
+]]></text></questiontext>
+  <answer fraction="0"><text>A</text></answer>
+  <answer fraction="100"><text>B</text></answer>
+  <answer fraction="0"><text>C</text></answer>
+  <answer fraction="0"><text>D</text></answer>
+</question>
+
+</quiz>

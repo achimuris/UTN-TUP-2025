@@ -1,5 +1,5 @@
 import IPesable from "./ipesable";
-export default abstract class  Barco implements IPesable
+abstract class  Barco implements IPesable
 {
     private _nombre: string = "";
         public get nombre(): string {
