@@ -15,19 +15,17 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var empleado_1 = require("./empleado");
-var Claustrofobico = /** @class */ (function (_super) {
-    __extends(Claustrofobico, _super);
-    function Claustrofobico() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.toleranciaVolumen = 120;
-        return _this;
+var proceso_1 = require("./proceso");
+var Encriptacion = /** @class */ (function (_super) {
+    __extends(Encriptacion, _super);
+    function Encriptacion() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
-    Claustrofobico.prototype.meSuboEnMicro = function (pMicro) {
-        if (pMicro.volumen <= this.toleranciaVolumen)
-            return false;
-        else
-            return true;
+    Encriptacion.prototype.procesar = function (pDocumento) {
+        var textoEncriptado;
+        textoEncriptado = "TEXTO ENCRIPTADO DE: " + pDocumento.contenido;
+        pDocumento.contenido = textoEncriptado;
     };
-    return Claustrofobico;
-}(empleado_1.default));
+    return Encriptacion;
+}(proceso_1.default));
+exports.default = Encriptacion;

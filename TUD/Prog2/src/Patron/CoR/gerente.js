@@ -15,19 +15,21 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var empleado_1 = require("./empleado");
-var Claustrofobico = /** @class */ (function (_super) {
-    __extends(Claustrofobico, _super);
-    function Claustrofobico() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.toleranciaVolumen = 120;
-        return _this;
+var empleadoabstracto_1 = require("./empleadoabstracto");
+var Gerente = /** @class */ (function (_super) {
+    __extends(Gerente, _super);
+    function Gerente() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
-    Claustrofobico.prototype.meSuboEnMicro = function (pMicro) {
-        if (pMicro.volumen <= this.toleranciaVolumen)
-            return false;
-        else
-            return true;
+    Gerente.prototype.Tope = function () {
+        return 2000;
     };
-    return Claustrofobico;
-}(empleado_1.default));
+    Gerente.prototype.autorizar = function (pMonto) {
+        if (this.Tope() > pMonto)
+            console.log('El gerente ' + this.presentarse() + ' autorizó la compra de ' + pMonto);
+        else if (this.superior != undefined)
+            this.superior.autorizar(pMonto);
+    };
+    return Gerente;
+}(empleadoabstracto_1.default));
+exports.default = Gerente;

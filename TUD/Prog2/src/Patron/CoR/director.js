@@ -15,19 +15,20 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var empleado_1 = require("./empleado");
-var Claustrofobico = /** @class */ (function (_super) {
-    __extends(Claustrofobico, _super);
-    function Claustrofobico() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.toleranciaVolumen = 120;
-        return _this;
+var empleadoabstracto_1 = require("./empleadoabstracto");
+var Director = /** @class */ (function (_super) {
+    __extends(Director, _super);
+    function Director(pNombre, pApellido, pLegajo, pSuperior) {
+        return _super.call(this, pNombre, pApellido, pLegajo, pSuperior) || this;
     }
-    Claustrofobico.prototype.meSuboEnMicro = function (pMicro) {
-        if (pMicro.volumen <= this.toleranciaVolumen)
-            return false;
-        else
-            return true;
+    Director.prototype.Tope = function () {
+        return 10000000;
     };
-    return Claustrofobico;
-}(empleado_1.default));
+    Director.prototype.autorizar = function (pMonto) {
+        if (this.Tope() > pMonto) {
+            console.log('El director ' + this.presentarse() + ' aprobó el monto de ' + pMonto);
+        }
+    };
+    return Director;
+}(empleadoabstracto_1.default));
+exports.default = Director;

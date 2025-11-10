@@ -15,19 +15,20 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var empleado_1 = require("./empleado");
-var Claustrofobico = /** @class */ (function (_super) {
-    __extends(Claustrofobico, _super);
-    function Claustrofobico() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.toleranciaVolumen = 120;
-        return _this;
+var proceso_1 = require("./proceso");
+var Compresion = /** @class */ (function (_super) {
+    __extends(Compresion, _super);
+    function Compresion() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
-    Claustrofobico.prototype.meSuboEnMicro = function (pMicro) {
-        if (pMicro.volumen <= this.toleranciaVolumen)
-            return false;
-        else
-            return true;
+    Compresion.prototype.procesar = function (pDocumento) {
+        var textoComprimido;
+        textoComprimido = "TEXTO COMPRIMIDO DE: " + pDocumento.contenido;
+        pDocumento.contenido = textoComprimido;
+        var nuevoNombre;
+        nuevoNombre = pDocumento.nombre + ".zip";
+        pDocumento.nombre = nuevoNombre;
     };
-    return Claustrofobico;
-}(empleado_1.default));
+    return Compresion;
+}(proceso_1.default));
+exports.default = Compresion;

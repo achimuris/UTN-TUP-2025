@@ -41,7 +41,8 @@ void apareo(int vecA[], int n, int vecB[], int m, int vecC[], int &k) {
     while (i < n && j < m) { // Comparo los valores de los vectores 
         if (vecA[i] < vecB[j]) { // Coloco el elemento de A porque es menor 
             vecC[k] = vecA[i]; // Me muevo en el vector A 
-            i++; } 
+            i++;
+        } 
         else { 
             vecC[k] = vecB[j];
             j++; 

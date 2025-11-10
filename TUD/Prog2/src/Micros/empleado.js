@@ -15,15 +15,15 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
+var claustrofobico_1 = require("./claustrofobico");
 var persona_1 = require("./persona");
 var Empleado = /** @class */ (function (_super) {
     __extends(Empleado, _super);
-    function Empleado(pNombre, pApellido, pLegajo, pJefe, pEmpleadosACargo) {
-        if (pJefe === void 0) { pJefe = undefined; }
+    //public  meSuboEnMicro(pMicro : Micro): boolean;
+    function Empleado(pNombre, pApellido, pLegajo, pJefe) {
         var _this = _super.call(this, pNombre, pApellido) || this;
-        _this._legajo = pLegajo;
-        _this._jefe = pJefe;
-        _this._empleadosACargo = pEmpleadosACargo;
+        _this.legajo = pLegajo;
+        _this.jefe = new claustrofobico_1.default("", "", "", "");
         return _this;
     }
     Object.defineProperty(Empleado.prototype, "legajo", {
