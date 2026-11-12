@@ -1,0 +1,14 @@
+C:\src\UTN\Prog II\Clase 08 - 20260828\ConsoleSolution\src\ConsoleApp\bin\Debug\net10.0\ConsoleApp.exe
+C:\src\UTN\Prog II\Clase 08 - 20260828\ConsoleSolution\src\ConsoleApp\bin\Debug\net10.0\ConsoleApp.deps.json
+C:\src\UTN\Prog II\Clase 08 - 20260828\ConsoleSolution\src\ConsoleApp\bin\Debug\net10.0\ConsoleApp.runtimeconfig.json
+C:\src\UTN\Prog II\Clase 08 - 20260828\ConsoleSolution\src\ConsoleApp\bin\Debug\net10.0\ConsoleApp.dll
+C:\src\UTN\Prog II\Clase 08 - 20260828\ConsoleSolution\src\ConsoleApp\bin\Debug\net10.0\ConsoleApp.pdb
+C:\src\UTN\Prog II\Clase 08 - 20260828\ConsoleSolution\src\ConsoleApp\obj\Debug\net10.0\ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\UTN\Prog II\Clase 08 - 20260828\ConsoleSolution\src\ConsoleApp\obj\Debug\net10.0\ConsoleApp.AssemblyInfoInputs.cache
+C:\src\UTN\Prog II\Clase 08 - 20260828\ConsoleSolution\src\ConsoleApp\obj\Debug\net10.0\ConsoleApp.AssemblyInfo.cs
+C:\src\UTN\Prog II\Clase 08 - 20260828\ConsoleSolution\src\ConsoleApp\obj\Debug\net10.0\ConsoleApp.csproj.CoreCompileInputs.cache
+C:\src\UTN\Prog II\Clase 08 - 20260828\ConsoleSolution\src\ConsoleApp\obj\Debug\net10.0\ConsoleApp.dll
+C:\src\UTN\Prog II\Clase 08 - 20260828\ConsoleSolution\src\ConsoleApp\obj\Debug\net10.0\refint\ConsoleApp.dll
+C:\src\UTN\Prog II\Clase 08 - 20260828\ConsoleSolution\src\ConsoleApp\obj\Debug\net10.0\ConsoleApp.pdb
+C:\src\UTN\Prog II\Clase 08 - 20260828\ConsoleSolution\src\ConsoleApp\obj\Debug\net10.0\ConsoleApp.genruntimeconfig.cache
+C:\src\UTN\Prog II\Clase 08 - 20260828\ConsoleSolution\src\ConsoleApp\obj\Debug\net10.0\ref\ConsoleApp.dll

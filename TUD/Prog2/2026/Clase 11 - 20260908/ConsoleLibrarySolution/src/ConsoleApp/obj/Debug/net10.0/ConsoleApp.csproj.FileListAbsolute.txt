@@ -1,0 +1,14 @@
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\ConsoleApp\bin\Debug\net10.0\ConsoleApp.exe
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\ConsoleApp\bin\Debug\net10.0\ConsoleApp.deps.json
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\ConsoleApp\bin\Debug\net10.0\ConsoleApp.runtimeconfig.json
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\ConsoleApp\bin\Debug\net10.0\ConsoleApp.dll
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\ConsoleApp\bin\Debug\net10.0\ConsoleApp.pdb
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\ConsoleApp\obj\Debug\net10.0\ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\ConsoleApp\obj\Debug\net10.0\ConsoleApp.AssemblyInfoInputs.cache
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\ConsoleApp\obj\Debug\net10.0\ConsoleApp.AssemblyInfo.cs
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\ConsoleApp\obj\Debug\net10.0\ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\ConsoleApp\obj\Debug\net10.0\ConsoleApp.dll
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\ConsoleApp\obj\Debug\net10.0\refint\ConsoleApp.dll
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\ConsoleApp\obj\Debug\net10.0\ConsoleApp.pdb
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\ConsoleApp\obj\Debug\net10.0\ConsoleApp.genruntimeconfig.cache
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\ConsoleApp\obj\Debug\net10.0\ref\ConsoleApp.dll

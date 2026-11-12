@@ -1,0 +1,11 @@
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\MisClases\bin\Debug\net10.0\MisClases.deps.json
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\MisClases\bin\Debug\net10.0\MisClases.dll
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\MisClases\bin\Debug\net10.0\MisClases.pdb
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\MisClases\obj\Debug\net10.0\MisClases.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\MisClases\obj\Debug\net10.0\MisClases.AssemblyInfoInputs.cache
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\MisClases\obj\Debug\net10.0\MisClases.AssemblyInfo.cs
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\MisClases\obj\Debug\net10.0\MisClases.csproj.CoreCompileInputs.cache
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\MisClases\obj\Debug\net10.0\MisClases.dll
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\MisClases\obj\Debug\net10.0\refint\MisClases.dll
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\MisClases\obj\Debug\net10.0\MisClases.pdb
+C:\Users\achim\Desktop\Prog II\Clase 11 - 20260908\ConsoleLibrarySolution\src\MisClases\obj\Debug\net10.0\ref\MisClases.dll
