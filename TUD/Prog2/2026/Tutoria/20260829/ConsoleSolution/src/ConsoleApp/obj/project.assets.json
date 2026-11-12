@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\src\\UTN\\Prog II\\Tutoria\\20260829\\ConsoleSolution\\src\\ConsoleApp\\ConsoleApp.csproj",
+      "projectUniqueName": "C:\\src\\git\\github\\UTN-TUP-2025\\TUD\\Prog2\\2026\\Tutoria\\20260829\\ConsoleSolution\\src\\ConsoleApp\\ConsoleApp.csproj",
       "projectName": "ConsoleApp",
-      "projectPath": "C:\\src\\UTN\\Prog II\\Tutoria\\20260829\\ConsoleSolution\\src\\ConsoleApp\\ConsoleApp.csproj",
+      "projectPath": "C:\\src\\git\\github\\UTN-TUP-2025\\TUD\\Prog2\\2026\\Tutoria\\20260829\\ConsoleSolution\\src\\ConsoleApp\\ConsoleApp.csproj",
       "packagesPath": "C:\\Users\\achim\\.nuget\\packages\\",
-      "outputPath": "C:\\src\\UTN\\Prog II\\Tutoria\\20260829\\ConsoleSolution\\src\\ConsoleApp\\obj\\",
+      "outputPath": "C:\\src\\git\\github\\UTN-TUP-2025\\TUD\\Prog2\\2026\\Tutoria\\20260829\\ConsoleSolution\\src\\ConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

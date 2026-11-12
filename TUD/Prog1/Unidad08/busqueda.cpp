@@ -7,12 +7,12 @@ int main(int argc, char const *argv[])
 {
     int miVector[5];
     miVector[0] = 123;
-    miVector[1] = 321;
+    miVector[1] = 6789;
     miVector[2] = 654;
     miVector[3] = 456;
-    miVector[4] = 6789;
+    miVector[4] = 321;
 
-    int indiceBusqueda = buscarSecuencial (miVector, 5, 3);
+    int indiceBusqueda = buscarSecuencial (miVector, 5, 321);
 
     if (indiceBusqueda == -1)
         std::cout << "No encontré el valor buscado en el vector" << std::endl;

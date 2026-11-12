@@ -43,11 +43,13 @@ int main () {
     cin >> valorBuscado;
 
     int indice =  busquedaBinaria(vector, CANTIDAD_DE_ELEMENTOS, valorBuscado);
-    vector[0]
+    //vector[0]
     if (indice != -1)
     {
         cout << "Encontró " << valorBuscado << " en en vector en la posición " << indice << endl; 
-    }else{
+    }
+    else
+    {
         cout << "No encontró el elemento " << valorBuscado << " en en vector" << endl;
     }
     
